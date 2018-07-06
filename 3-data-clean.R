@@ -26,5 +26,15 @@ all <- rbind(boys, girls)
 all$percent <- as.numeric(gsub("%", "", all$percent)) / 100
 all$year <- as.numeric(as.character(all$year))
 
+consonants <- letters[! letters %in% c("a", "e", "i", "o", "u")]
+
+all$vowels <- all %>% 
+  pull(name) %>% 
+  sapply(.,function(x) str_count(tolower(x),c("a", "e", "i", "o", "u")) %>% sum) %>% as.vector()
+
+all %<>% mutate(consonants = str_count(name) - vowels, 
+                length = str_count(name), 
+                lname = tolower(name))
+
 # Save as csv
-write.table(all, "baby-names.csv", sep=",", row = F)
+write.table(all, "./name_generator/baby-names.csv", sep=",", row = F)
