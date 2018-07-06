@@ -4,7 +4,7 @@ A collection of scripts in R and Ruby to gather a name database and generate (or
 # Data source and scraping
 These scripts rely on the United States Social Security Administration's birth name database for all analyses, found at `https://www.ssa.gov/cgi-bin/popularnames.cgi`.
 
-Scraping, cleaning, and collation of data is handled by scripts modified from Hadley Wickham's `hadley/babynames` project, written in R and Ruby. First, data is collected year-by-year using POST requests from the `popularnames.cgi` form, using `RCurl`. Data are then parsed from tabular HTML format into year-by-year csv files using the `nokogiri` package in Ruby, and finally collated into a unified csv with a third R script. 
+Scraping, cleaning, and collation of data is handled by scripts modified from Hadley Wickham's `hadley/babynames` project, written in R and Ruby. First, in `1-data_download.R` data is collected year-by-year using POST requests from the `popularnames.cgi` form, using `RCurl`. Data are then parsed from tabular HTML format into year-by-year csv files using the `nokogiri` package in Ruby (`2-data-parse.rb`), and finally collated into a unified csv with `3-data-clean.R`. 
 
 # Visualization via Shiny
 
