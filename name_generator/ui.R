@@ -31,9 +31,9 @@ shinyUI(navbarPage(
              )),
       column(4, wellPanel(
         textInput("name_cont", "Name contains this word (e.g., \"der\")"),
-        textInput("name_end", "Name ends with (e.g., \"aura\")"),
-        textInput("name_start", "Name starts with (e.g., \"Lau\")"),
-        textInput("name_letters", "Name contains these letters (e.g., \"abcd\")")
+        textInput("name_end", "Name ends with (e.g., \"ders\")"),
+        textInput("name_start", "Name starts with (e.g., \"And\")"),
+        textInput("name_letters", "Name contains these letters (e.g., \"dnr\")")
       ))
     ),
     fluidRow(column(12, wellPanel(

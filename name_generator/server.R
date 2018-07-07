@@ -109,7 +109,8 @@ shinyServer(function(input, output, session) {
       input$name2,
       input$name3,
       input$name4,
-      input$name5
+      input$name5,
+      input$name6
     ))
     if (!all(invec == "") &
         any(invec[invec != ""] %in% tolower(names$name))) {

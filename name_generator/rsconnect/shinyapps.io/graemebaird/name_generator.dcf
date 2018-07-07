@@ -1,0 +1,12 @@
+name: name_generator
+title:
+username:
+account: graemebaird
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 375039
+bundleId: 1467320
+url: https://graemebaird.shinyapps.io/name_generator/
+when: 1530843715.41592
+asMultiple: FALSE
+asStatic: FALSE
