@@ -37,7 +37,10 @@ shinyUI(navbarPage(
       ))
     ),
     fluidRow(column(12, wellPanel(
-      DT::dataTableOutput(outputId = "table_boy")
+          DT::dataTableOutput(outputId = "table_boy")
+    ))),
+    fluidRow(column(12, wellPanel(
+      DT::dataTableOutput(outputId = "table_girl")
     )))
   ),
   tabPanel("Name plotter",

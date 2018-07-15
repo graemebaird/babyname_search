@@ -301,6 +301,10 @@ shinyServer(function(input, output, session) {
     grid.arrange(a, b, ncol = 1)
   })
   
+  output$gender <- reactive({
+    input$gender %in% c("boy", "any")
+  })
+  
   observeEvent(input$reset_input, {
     updateSliderInput(session, "year", value = c(1880, 2016))
     updateSliderInput(session, "vowels", value = c(0, 6))
